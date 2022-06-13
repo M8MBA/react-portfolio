@@ -1,0 +1,40 @@
+Setting up the project
+
+  Much like jQuery and Moment.js, the source code for React can be found on npm, as well as a CDN. Unlike jQuery and Moment.js, though, React isn't just injected into files where it's needed. Typically, React is responsible for part—if not all—of the front end. Rather than build a starter project from scratch, we’ll use the Create React App (CRA) CLI to bootstrap the application.
+
+  To do this, cd into the directory where you want to store this new project, and then run the following command:
+
+  npx create-react-app react-portfolio
+
+Success! Created react-portfolio at /Users/Cade/Desktop/bootcamp/challenges/react-portfolio/react-portfolio
+Inside that directory, you can run several commands:
+
+  npm start
+    Starts the development server.
+
+  npm run build
+    Bundles the app into static files for production.
+
+  npm test
+    Starts the test runner.
+
+  npm run eject
+    Removes this tool and copies build dependencies, configuration files
+    and scripts into the app directory. If you do this, you can’t go back!
+
+We suggest that you begin by typing:
+
+  cd react-portfolio
+  npm start
+
+  ctrl+c to stop connection to server
+
+we used npx instead of npm? This package runner tool simplifies the installation and running process of devDependencies. Rather than installing CRA and then running it, npx will try using the local installation. If it's not there, npx will install it for you.
+
+Run npm install to ensure that your project is now running React version needed 
+
+
+You can think of the index.js file as the main entry point for the application. The ReactDOM library is rendering the App component at the root element in the HTML. You can find the HTML by navigating to the public folder.
+
+Now open the public/ directory and look at index.html. You probably won't do too much in this file, because you'll write most of the code in separate components. But you should know that React will inject the whole app into whichever element has the root id.
+

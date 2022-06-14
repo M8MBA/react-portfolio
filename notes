@@ -38,3 +38,11 @@ You can think of the index.js file as the main entry point for the application. 
 
 Now open the public/ directory and look at index.html. You probably won't do too much in this file, because you'll write most of the code in separate components. But you should know that React will inject the whole app into whichever element has the root id.
 
+
+The ABOUT component
+
+This App.js file is the center of the application. Think of App.js as the root component, or the wrapper component that houses all of the other components. To effect any change on the application, we need to either modify this file or add components inside it.
+
+    *** React components follow the PascalCase naming convention. Knowing this will help you quickly identify whether a function is a component or just a regular function.
+
+You need to import React in every component file. You can also import any images or CSS you want to use at the top.

@@ -13,8 +13,8 @@ main {
   --error: rgb(228, 46, 1);
   --spacing-one: calc(1rem * 0.5);
   --spacing-two: calc(1rem);
+  --spacing-four: calc(2rem);
   --spacing-five: calc(2.5rem);
-
 }
 
 * {
@@ -32,15 +32,22 @@ body {
   font-weight: 600;
   line-height: 1.5;
   font-size: 18px;
-  letter-spacing: .1em;
+  letter-spacing: .05em;
   background: var(--dark);
   color: var(--light);
-  font-family: 'Poiret One', cursive;
+  /* font-family: 'Poiret One', cursive; */
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 
 }
 
-h1,
-h2,
+h1 {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+h2 {
+  margin: 0;
+}
+
 h3,
 h4,
 h5,
@@ -84,6 +91,7 @@ a {
   color: var(--tertiary);
   text-decoration: none;
   font-weight: bold;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
 
 a:hover {
@@ -92,10 +100,16 @@ a:hover {
 
 header {
   background: var(--dark);
+  margin-top: 15px;
 }
 
 header a {
   color: var(--light);
+  display: flex;
+}
+
+#about {
+  margin-bottom: 15px;
 }
 
 button {
@@ -123,7 +137,7 @@ img {
   max-width: 100%;
 }
 
-span[role="img"] {
+span {
   cursor: default;
 }
 
@@ -149,12 +163,20 @@ li {
   list-style: none;
 }
 
+nav {
+  display: flex;
+  flex-basis: 80%;
+  justify-content: space-around;
+}
+
 nav a:hover {
   text-decoration: none;
 }
 
 nav  li {
   cursor: pointer;
+  margin-right: var(--spacing-four);
+  margin-left: var(--spacing-five);
 }
 
 textarea {
@@ -173,7 +195,10 @@ textarea {
 
 .flex-row {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
+
+  /* flex-wrap: wrap; */
+  /* flex-basis: 200px; */
 }
 
 .space-between {
@@ -185,13 +210,16 @@ textarea {
 }
 
 .mx-1 {
-  margin-right: var(--spacing-one);
-  margin-left: var(--spacing-one);
+  margin-right: var(--spacing-five);
+  margin-left: var(--spacing-five);
 }
 
 .mx-2 {
   margin-right: var(--spacing-two);
   margin-left: var(--spacing-two);
+  display: flex;
+  justify-content: space-between;
+  
 }
 
 .my-1 {
@@ -200,8 +228,7 @@ textarea {
 }
 
 .my-2 {
-  margin-top: var(--spacing-two);
-  margin-bottom: var(--spacing-two);
+  margin-bottom: var(--spacing-one);
 }
 
 .my-5 {
@@ -211,7 +238,7 @@ textarea {
 
 .px-1 {
   padding-right: var(--spacing-one);
-  padding-left: var(--spacing-one);
+  padding-left: var(--spacing-four);
 }
 
 .px-2 {
@@ -286,7 +313,6 @@ a {
 	padding: 2px 4px;
 	margin-left: -2px;
 	margin-right: -2px;
-	
 }
 
 .navActive {

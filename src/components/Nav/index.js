@@ -14,23 +14,20 @@ function Nav() {
   return (
     <header data-testid="header" className="flex-row px-1" >
       <h2>
-        <a href="/">
-          <span role="img" aria-label="camera"> </span> Cade 🤑 Wilson
+        <a href="/" >
+          <span>Cade Wilson</span> 
         </a>
       </h2>
       <nav>
-        <ul className="flex-row">
-          <li className="mx-2">
-            <a href="#about">
-              About me
-            </a>
+        <ul className="mx-2">
+          <li>
+              <span>About Me</span>
           </li>
           <li>
             <span>Portfolio</span>
           </li>
           {categories.map((category) => (
             <li
-              className="mx-1"
               key={category.name}
             >
               <span onClick={() => categorySelected(category.name)} >

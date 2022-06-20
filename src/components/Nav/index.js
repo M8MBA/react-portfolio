@@ -28,7 +28,9 @@ function Nav() {
             <span>Portfolio</span>
           </li>
           {categories.map((category) => (
-            <li key={category.name} >
+            <li 
+              key={category.name} 
+            >
               <span onClick={() => categorySelected(category.name)} >
                 {category.name}
               </span>

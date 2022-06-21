@@ -1,7 +1,8 @@
 import React from 'react';
 import About from './components/About';
 import Nav from './components/Nav';
-import Resume from './components/Resume';
+// import Resume from './components/Resume';
+import Portfolio from './components/Portfolio';
 
 
 
@@ -25,6 +26,7 @@ function App() {
     <div>
       <Nav></Nav>
       <main>
+        <Portfolio></Portfolio>
         <About></About>
       </main>
     </div>

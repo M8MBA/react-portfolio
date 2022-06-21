@@ -1,21 +1,22 @@
-import React from 'react';
-
-const categories = [
-  { name: "Contact Me", description: "Let's chat!" },
-  { name: "Resume", description: "Previous Work" },
-
-];
+import React, { useState } from 'react';
+import { capitalizeFirstLetter } from "../../utils/helpers";
 
 function categorySelected() {
   console.log("hello")
 }
 
 function Nav() {
+const [categories] = useState([
+  { name: "Contact Me", description: "Let's chat!" },
+  { name: "Resume", description: "Previous Work" },
+
+]);
+const [currentCategory, setCurrentCategory] = useState(categories[0]);
 
   return (
-    <header data-testid="header" className="flex-row px-1" >
+    <header className="flex-row px-1" >
       <h2>
-        <a href="/" >
+        <a data-testid="link" href="/" >
           <span>Cade Wilson</span> 
         </a>  
       </h2>
@@ -28,11 +29,15 @@ function Nav() {
             <span>Portfolio</span>
           </li>
           {categories.map((category) => (
-            <li 
-              key={category.name} 
-            >
-              <span onClick={() => categorySelected(category.name)} >
-                {category.name}
+            <li className={`mx-1 ${
+                currentCategory.name === category.name && 'navActive'
+                }`} key={category.name}>
+              <span
+                onClick={() => {
+                  setCurrentCategory(category)
+                }}
+              >
+                {capitalizeFirstLetter(category.name)}
               </span>
             </li>
           ))}

@@ -86,3 +86,16 @@ function categorySelected(name) {
     </span>
   </li>
 ))}
+
+REACT HOOKS
+__________________
+
+useState() is a function that will always return an array.
+
+The first item is the value of your state, and the second item is a setter, which allows you to set the state to something else. Because we're destructuring from an array, we could name these two things whatever we want, but it's best to stick to variable names that make sense.
+
+So what exactly are Hooks? Hooks are just JavaScript functions that follow two rules:
+
+    The first rule is "Only call Hooks from React functions." This should be easy to remember, because you often use Hooks to affect the state of a component in some way and trigger the component to render.
+
+    The second rule is "Only call Hooks at the top level". This means that you cannot use them inside for loops, nested functions within your React component, or conditionals. For organizational purposes and to ensure that you're following these rules, you may want to use Hooks towards the top of your React component.

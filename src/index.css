@@ -199,6 +199,7 @@ textarea {
 
 .flex-row {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .space-between {
@@ -210,7 +211,7 @@ textarea {
 }
 
 .mx-1 {
-  /* margin-right: var(--spacing-five); */
+  margin-right: var(--spacing-five);
   /* margin-left: var(--spacing-five); */
 }
 

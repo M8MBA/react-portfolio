@@ -1,37 +1,41 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { capitalizeFirstLetter } from "../../utils/helpers";
 
-function categorySelected() {
-  console.log("hello")
-}
+function Nav(props) {
+  const {
+    categories = [],
+    setCurrentCategory,
+    currentCategory,
+  } = props;
 
-function Nav() {
-const [categories] = useState([
-  { name: "Contact Me", description: "Let's chat!" },
-  { name: "Resume", description: "Previous Work" },
-
-]);
-const [currentCategory, setCurrentCategory] = useState(categories[0]);
+  const handleClick = (item) => {
+    console.log(item);
+    return item;
+  };
 
   return (
     <header className="flex-row px-1" >
       <h2>
         <a data-testid="link" href="/" >
-          <span>Cade Wilson</span> 
-        </a>  
+          <span></span>Cade Wilson
+        </a>
       </h2>
       <nav>
         <ul className="mx-2">
           <li>
-            <span href="#about">About Me</span>
+            <a data-testid="about" href="#about">
+              About me
+            </a>
           </li>
-          <li>
-            <span>Portfolio</span>
+          <li className={"mx-2"}>
+            <span onClick={() => handleClick('Portfolio')}>
+              Portfolio
+            </span>
           </li>
+
           {categories.map((category) => (
-            <li className={`mx-1 ${
-                currentCategory.name === category.name && 'navActive'
-                }`} key={category.name}>
+            <li className={`mx-1 ${currentCategory.name === category.name && 'navActive'
+              }`} key={category.name}>
               <span
                 onClick={() => {
                   setCurrentCategory(category)

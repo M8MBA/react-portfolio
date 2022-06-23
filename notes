@@ -99,3 +99,9 @@ So what exactly are Hooks? Hooks are just JavaScript functions that follow two r
     The first rule is "Only call Hooks from React functions." This should be easy to remember, because you often use Hooks to affect the state of a component in some way and trigger the component to render.
 
     The second rule is "Only call Hooks at the top level". This means that you cannot use them inside for loops, nested functions within your React component, or conditionals. For organizational purposes and to ensure that you're following these rules, you may want to use Hooks towards the top of your React component.
+
+allows the active page to change color
+
+There's also a short-circuit expression, as shown in the following code snippet:
+
+<li className={`mx-1 ${currentCategory.name === category.name && 'navActive'}`}>

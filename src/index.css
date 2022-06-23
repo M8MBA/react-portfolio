@@ -81,7 +81,7 @@ h6 {
 
 p {
   font-size: 1.1rem;
-  margin-top: 0;
+  margin-bottom: 50px;
 }
 
 a {
@@ -263,10 +263,12 @@ textarea {
 }
 
 .img-thumbnail {
-  width: auto;
+  width: 400px;
   height: 300px;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   cursor: pointer;
+  object-fit: cover;
+  border-radius: 4%;
 }
 
 .modalBackdrop {

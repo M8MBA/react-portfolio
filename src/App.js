@@ -1,46 +1,29 @@
 import React, { useState } from 'react';
-import About from './components/About';
-import Nav from './components/Nav';
-// import Resume from './components/Resume';
-import Portfolio from './components/Portfolio';
-
-
+import {
+  Header,
+  About,
+  Footer,
+  Portfolio,
+  Contact,
+  Resume,
+} from './components';
 
 function App() {
-  const [categories] = useState([
-    // {
-    //   name: 'About Me',
-    //   description: 'a downloadable link to my resume and coding abilities'
-    // },
-    // {
-    //   name: 'portfolio',
-    //   description: 'a showcase of my projects'
-    // },
-    {
-      name: 'contact Me',
-      description: 'input boxes to allow anyone to contact me via email'
-    },
-    {
-      name: 'resume',
-      description: 'a downloadable link to my resume and coding abilities'
-    },
-  ]);
-
-  const [currentCategory, setCurrentCategory] = useState(categories[0]);
+  const navList = ['About me', 'Portfolio', 'Contact', 'Resume'];
+  const [currentTab, setCurrentTab] = useState('About me');
 
   return (
     <div>
-      <Nav
-        categories={categories}
-        setCurrentCategory={setCurrentCategory}
-        currentCategory={currentCategory}
-      ></Nav>
-      <main>
-        <div>
-          <Portfolio></Portfolio>
-          <About></About>
-        </div>
-      </main>
+      <Header
+        navList={navList}
+        currentTab={currentTab}
+        setCurrentTab={setCurrentTab}
+      />
+      {currentTab === 'About me' && <About />}
+      {currentTab === 'Portfolio' && <Portfolio />}
+      {currentTab === 'Contact' && <Contact />}
+      {currentTab === 'Resume' && <Resume />}
+      <Footer />
     </div>
   );
 }

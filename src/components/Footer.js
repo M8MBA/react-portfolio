@@ -12,7 +12,6 @@ function Footer() {
       icon: '',
       link: '/',
     },
-    ,
     {
       name: 'stackoverflow',
       icon: '',
